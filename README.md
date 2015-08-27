@@ -7,15 +7,13 @@ Infelizmente, a burocracia de criar um repositório no Maven Central é grande e
 # Uso
 O uso desta interface é muito simples, pois se trata de uma **MonetaryQuery**. Vamos lá!
 
-  public class Exemplo {
-  
-    public static void main(String...args) {
-        MonetaryAmount d = FastMoney.of(10.32, "BRL");
-        String extenso = d.query(new ValorPorExtensoQuery());
-        System.out.println(extenso);
+    public class Exemplo {
+      public static void main(String...args) {
+          MonetaryAmount d = FastMoney.of(10.32, "BRL");
+          String extenso = d.query(new ValorPorExtensoQuery());
+          System.out.println(extenso);
+      }
     }
-    
-  }
 
 # Créditos
 A implementação que converte um BigDecimal para uma String é um fork do projeto PorExtenso, que se encontra em https://github.com/mcrisc/porextenso/. Como a estrutura dos dois projetos é totalmente distinta, resolvi fazer uma implementação completamente nova, mas copiando a classe CurrencyWriter para este projeto. O autor do projeto já foi contatado e avisado desta "cópia" previamente.
